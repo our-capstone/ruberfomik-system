@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
@@ -12,69 +13,70 @@
     @include('admin.layout.styles')
 
     @include('admin.layout.scripts')
-    
+
 </head>
 
 <body>
-<div id="app">
-    <div class="main-wrapper">
-        
-        @include('admin.layout.nav')
+    <div id="app">
+        <div class="main-wrapper">
 
-        @include('admin.layout.sidebar')        
+            @include('admin.layout.nav')
 
-        <div class="main-content">
-            <section class="section">
-                <div class="section-header">
-                    <h1>@yield('heading')</h1>
-                    <div class="ml-auto">
-                        {{-- <a href="" class="btn btn-primary"><i class="fas fa-plus"></i> Button</a> --}}
+            @include('admin.layout.sidebar')
+
+            <div class="main-content">
+                <section class="section">
+                    <div class="section-header">
+                        <h1>@yield('heading')</h1>
+                        <div class="ml-auto">
+                            @yield('button')
+                        </div>
                     </div>
-                </div>
 
-                @yield('main_content')
+                    @yield('main_content')
 
 
-            </section>
+                </section>
+            </div>
+
         </div>
-
     </div>
-</div>
 
-@include('admin.layout.scripts_footer')
+    @include('admin.layout.scripts_footer')
 
 
-@if($errors->any())
-    @foreach($errors->all() as $error)
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <script>
+                iziToast.error({
+                    title: '',
+                    position: 'topRight',
+                    message: '{{ $error }}',
+                });
+            </script>
+        @endforeach
+    @endif
+
+    @if (session()->get('error'))
         <script>
             iziToast.error({
                 title: '',
                 position: 'topRight',
-                message: '{{ $error }}',
+                message: '{{ session()->get('error') }}',
             });
         </script>
-    @endforeach
-@endif
+    @endif
 
-@if(session()->get('error'))
-    <script>
-        iziToast.error({
-            title: '',
-            position: 'topRight',
-            message: '{{ session()->get('error') }}',
-        });
-    </script>
-@endif
-
-@if(session()->get('success'))
-    <script>
-        iziToast.success({
-            title: '',
-            position: 'topRight',
-            message: '{{ session()->get('success') }}',
-        });
-    </script>
-@endif
+    @if (session()->get('success'))
+        <script>
+            iziToast.success({
+                title: '',
+                position: 'topRight',
+                message: '{{ session()->get('success') }}',
+            });
+        </script>
+    @endif
 
 </body>
+
 </html>
