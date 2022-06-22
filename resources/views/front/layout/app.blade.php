@@ -177,7 +177,7 @@
     </div>
 
     <div class="copyright">
-        Copyright 2022, ArefinDev. All Rights Reserved.
+        Copyright 2022, Our Capstone. All Rights Reserved.
     </div>
 
     <div class="scroll-top">
