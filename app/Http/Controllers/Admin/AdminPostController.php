@@ -95,4 +95,50 @@ class AdminPostController extends Controller
         $tag->delete();
         return redirect()->route('admin_post_edit', $id1)->with('success', 'Data is Deleted Successfully!');
     }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'post_title' => 'required',
+            'post_detail' => 'required'
+        ]);
+
+        $post = Post::where('id', $id)->first();
+
+        if ($request->hasFile('post_photo')) {
+            $request->validate([
+                'post_photo' => 'image|mimes:jpg,jpeg,png,gif'
+            ]);
+
+            unlink(public_path('uploads/' . $post->post_photo));
+
+            $now = time();
+            $ext = $request->file('post_photo')->extension();
+            $final_name = 'post_photo' . $now . '.' . $ext;
+            $request->file('post_photo')->move(public_path('uploads/'), $final_name);
+
+            $post->post_photo = $final_name;
+        }
+
+
+        $post->sub_category_id = $request->sub_category_id;
+        $post->post_title = $request->post_title;
+        $post->post_detail = $request->post_detail;
+        $post->visitors = 1;
+        $post->author_id = 0;
+        $post->admin_id = Auth::guard('admin')->user()->id;
+        $post->is_share = $request->is_share;
+        $post->is_comment = $request->is_comment;
+        $post->update();
+
+        $tags_array = explode(',', $request->tags);
+        for ($i = 0; $i < count($tags_array); $i++) {
+            $tag = new Tag();
+            $tag->post_id = $id;
+            $tag->tag_name = trim($tags_array[$i]);
+            $tag->save();
+        }
+
+        return redirect()->route('admin_post_show')->with('success', 'Data is updated successfully.');
+    }
 }
