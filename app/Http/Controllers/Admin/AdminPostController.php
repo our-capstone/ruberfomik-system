@@ -38,6 +38,7 @@ class AdminPostController extends Controller
 
     public function store(Request $request)
     {
+
         $request->validate([
             'post_title' => 'required',
             'post_detail' => 'required',
@@ -68,11 +69,19 @@ class AdminPostController extends Controller
         $post->is_comment = $request->is_comment;
         $post->save();
 
+        // Menghilangkan duplikasi tag pada post baru
+        $tags_array_new = [];
         $tags_array = explode(',', $request->tags);
         for ($i = 0; $i < count($tags_array); $i++) {
+            $tags_array_new[] = trim($tags_array[$i]);
+        }
+        $tags_array_new = array_values(array_unique($tags_array_new));
+        // dd($tags_array_new);
+
+        for ($i = 0; $i < count($tags_array_new); $i++) {
             $tag = new Tag();
             $tag->post_id = $ai_id;
-            $tag->tag_name = trim($tags_array[$i]);
+            $tag->tag_name = trim($tags_array_new[$i]);
             $tag->save();
         }
 
@@ -133,10 +142,15 @@ class AdminPostController extends Controller
 
         $tags_array = explode(',', $request->tags);
         for ($i = 0; $i < count($tags_array); $i++) {
-            $tag = new Tag();
-            $tag->post_id = $id;
-            $tag->tag_name = trim($tags_array[$i]);
-            $tag->save();
+
+            // Menghilangkan duplikat tag
+            $total = Tag::where('post_id', $id)->where('tag_name', ($tags_array[$i]))->count();
+            if (!$total) {
+                $tag = new Tag();
+                $tag->post_id = $id;
+                $tag->tag_name = trim($tags_array[$i]);
+                $tag->save();
+            }
         }
 
         return redirect()->route('admin_post_show')->with('success', 'Data is updated successfully.');
