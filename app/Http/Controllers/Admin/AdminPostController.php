@@ -155,4 +155,15 @@ class AdminPostController extends Controller
 
         return redirect()->route('admin_post_show')->with('success', 'Data is updated successfully.');
     }
+
+    public function delete($id)
+    {
+        // dd($id1);
+        $post = Post::where('id', $id)->first();
+        unlink(public_path('uploads/' . $post->post_photo));
+        $post->delete();
+
+        Tag::where('post_id', $id)->delete();
+        return redirect()->route('admin_post_show')->with('success', 'Data is Deleted Successfully!');
+    }
 }
