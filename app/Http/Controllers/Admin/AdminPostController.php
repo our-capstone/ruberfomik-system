@@ -40,7 +40,8 @@ class AdminPostController extends Controller
     {
         $request->validate([
             'post_title' => 'required',
-            'post_detail' => 'required'
+            'post_detail' => 'required',
+            'post_photo' => 'required|image|mimes:jpg,jpeg,png,gif'
         ]);
 
         $q = DB::select("SHOW TABLE STATUS LIKE 'posts'");
@@ -49,10 +50,17 @@ class AdminPostController extends Controller
         // dd($request->tags);
 
 
+        $now = time();
+
+        $ext = $request->file('post_photo')->extension();
+        $final_name = 'post_photo_' . $now . '.' . $ext;
+        $request->file('post_photo')->move(public_path('uploads/'), $final_name);
+
         $post = new Post();
         $post->sub_category_id = $request->sub_category_id;
         $post->post_title = $request->post_title;
         $post->post_detail = $request->post_detail;
+        $post->post_photo = $final_name;
         $post->visitors = 1;
         $post->author_id = 0;
         $post->admin_id = Auth::guard('admin')->user()->id;
@@ -69,5 +77,22 @@ class AdminPostController extends Controller
         }
 
         return redirect()->route('admin_post_show')->with('success', 'Data is added successfully.');
+    }
+
+    public function edit($id)
+    {
+        $sub_categories = SubCategory::with('relationshipCategory')->get();
+        $existing_tags = Tag::where('post_id', $id)->get();
+        // dd($existing_tags);
+        $post_single = Post::where('id', $id)->first();
+        return view('admin.post_edit', compact('post_single', 'sub_categories', 'existing_tags'));
+    }
+
+    public function delete_tag($id, $id1)
+    {
+        // dd($id1);
+        $tag = Tag::where('id', $id)->first();
+        $tag->delete();
+        return redirect()->route('admin_post_edit', $id1)->with('success', 'Data is Deleted Successfully!');
     }
 }

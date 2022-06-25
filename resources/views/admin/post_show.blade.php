@@ -17,6 +17,7 @@
                                 <thead>
                                     <tr>
                                         <th>SL</th>
+                                        <th>Thumbnail</th>
                                         <th>Post Title </th>
                                         <th>Sub Category</th>
                                         <th>Category</th>
@@ -29,6 +30,10 @@
                                     @foreach ($posts as $row)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
+                                            <td>
+                                                <img src="{{ asset('uploads/' . $row->post_photo) }}" alt=""
+                                                    style="width:200px;">
+                                            </td>
                                             <td>{{ $row->post_title }}</td>
                                             <td>{{ $row->relationshipSubCategory->sub_category_name }}</td>
                                             <td>{{ $row->relationshipSubCategory->relationshipCategory->category_name }}
