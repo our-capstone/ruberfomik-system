@@ -18,8 +18,8 @@
                                     <tr>
                                         <th>SL</th>
                                         <th>Post Title </th>
-                                        <th>Category</th>
                                         <th>Sub Category</th>
+                                        <th>Category</th>
                                         <th>Author</th>
                                         <th>Admin</th>
                                         <th>Action</th>
@@ -30,10 +30,15 @@
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $row->post_title }}</td>
+                                            <td>{{ $row->relationshipSubCategory->sub_category_name }}</td>
+                                            <td>{{ $row->relationshipSubCategory->relationshipCategory->category_name }}
+                                            </td>
                                             <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>
+                                                @if ($row->admin_id != 0)
+                                                    {{ Auth::guard('admin')->user()->name }}
+                                                @endif
+                                            </td>
                                             <td class="pt_10 pb_10">
                                                 <a href="{{ route('admin_post_edit', $row->id) }}"
                                                     class="btn btn-primary">Edit</a>
