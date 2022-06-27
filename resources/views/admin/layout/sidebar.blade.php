@@ -28,6 +28,10 @@
                 </ul>
             </li>
 
+            <li class="active"><a class="nav-link" href="{{ route('admin_setting') }}"><i
+                        class="fas fa-hand-point-right"></i> <span>Setting</span></a></li>
+
+
 
         </ul>
     </aside>
