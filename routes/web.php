@@ -52,3 +52,4 @@ Route::get('/admin/post/delete/{id}', [AdminPostController::class, 'delete'])->n
 Route::get('/admin/post/tag/delete/{id}/{id1}', [AdminPostController::class, 'delete_tag'])->name('admin_post_delete_tag')->middleware('admin:admin');
 
 Route::get('/admin/setting', [AdminSettingController::class, 'index'])->name('admin_setting')->middleware('admin:admin');
+Route::post('/admin/setting/update', [AdminSettingController::class, 'update'])->name('admin_setting_update');

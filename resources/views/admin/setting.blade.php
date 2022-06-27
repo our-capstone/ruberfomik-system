@@ -2,9 +2,7 @@
 
 @section('heading', 'Setting')
 
-@section('button')
-    <a href="{{ route('admin_category_create') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Add</a>
-@endsection
+
 
 @section('main_content')
     <div class="section-body">
@@ -12,7 +10,8 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <form action="" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('admin_setting_update') }}" method="post" enctype="multipart/form-data">
+                            @csrf
 
                             <div class="row">
                                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-12">
