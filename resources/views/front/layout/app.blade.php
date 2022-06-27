@@ -177,7 +177,7 @@
     </div>
 
     <div class="copyright">
-        Copyright 2022, Our Capstone. All Rights Reserved.
+        Created with &#10084; Our Capstone
     </div>
 
     <div class="scroll-top">
