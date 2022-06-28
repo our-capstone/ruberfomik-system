@@ -7,6 +7,7 @@ use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminPostController;
 use App\Http\Controllers\Admin\AdminLoginController;
+use App\Http\Controllers\Front\SubCategoryController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminSettingController;
 use App\Http\Controllers\Admin\AdminCategoryController;
@@ -16,6 +17,7 @@ use App\Http\Controllers\Admin\AdminSubCategoryController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/news-detail/{id}', [PostController::class, 'detail'])->name('news_detail');
+Route::get('/category/{id}', [SubCategoryController::class, 'index'])->name('category');
 
 
 /* Admin */
