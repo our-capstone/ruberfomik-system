@@ -7,6 +7,7 @@ use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminPostController;
 use App\Http\Controllers\Admin\AdminLoginController;
+use App\Http\Controllers\Admin\AdminPhotoController;
 use App\Http\Controllers\Front\SubCategoryController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminSettingController;
@@ -57,3 +58,11 @@ Route::get('/admin/post/tag/delete/{id}/{id1}', [AdminPostController::class, 'de
 
 Route::get('/admin/setting', [AdminSettingController::class, 'index'])->name('admin_setting')->middleware('admin:admin');
 Route::post('/admin/setting/update', [AdminSettingController::class, 'update'])->name('admin_setting_update');
+
+
+Route::get('/admin/photo/show', [AdminPhotoController::class, 'show'])->name('admin_photo_show')->middleware('admin:admin');
+Route::get('/admin/photo/create', [AdminPhotoController::class, 'create'])->name('admin_photo_create')->middleware('admin:admin');
+Route::post('/admin/photo/store', [AdminPhotoController::class, 'store'])->name('admin_photo_store');
+Route::get('/admin/photo/edit/{id}', [AdminPhotoController::class, 'edit'])->name('admin_photo_edit')->middleware('admin:admin');
+Route::post('/admin/photo/update/{id}', [AdminPhotoController::class, 'update'])->name('admin_photo_update');
+Route::get('/admin/photo/delete/{id}', [AdminPhotoController::class, 'delete'])->name('admin_photo_delete')->middleware('admin:admin');

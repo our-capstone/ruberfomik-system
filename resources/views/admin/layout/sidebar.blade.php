@@ -31,6 +31,9 @@
             <li class="active"><a class="nav-link" href="{{ route('admin_setting') }}"><i
                         class="fas fa-hand-point-right"></i> <span>Setting</span></a></li>
 
+            <li class="active"><a class="nav-link" href="{{ route('admin_photo_show') }}"><i
+                        class="fas fa-hand-point-right"></i> <span>Gallery Facility</span></a></li>
+
 
 
         </ul>
