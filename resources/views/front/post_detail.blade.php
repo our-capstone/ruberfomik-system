@@ -58,165 +58,9 @@
                             @endforeach
                         </div>
                     </div>
-                    <div class="share-content">
-                        <h2>Share</h2>
-                        <div class="addthis_inline_share_toolbox"></div>
-                    </div>
-                    <div class="comment-fb">
-                        <h2>Comment</h2>
-                        <div id="disqus_thread"></div>
-                        <script>
-                            (function() { // DON'T EDIT BELOW THIS LINE
-                                var d = document,
-                                    s = d.createElement('script');
-                                s.src = 'https://arefindev-com.disqus.com/embed.js';
-                                s.setAttribute('data-timestamp', +new Date());
-                                (d.head || d.body).appendChild(s);
-                            })();
-                        </script>
-                    </div>
-                    <div class="related-news">
-                        <div class="related-news-heading">
-                            <h2>Related News</h2>
-                        </div>
-                        <div class="related-post-carousel owl-carousel owl-theme">
-                            <div class="item">
-                                <div class="photo">
-                                    <img src="uploads/n6.jpg" alt="">
-                                </div>
-                                <div class="category">
-                                    <span class="badge bg-success">International</span>
-                                </div>
-                                <h3><a href="">Haaland scores before going off injured in Dortmund win and it is very
-                                        real</a></h3>
-                                <div class="date-user">
-                                    <div class="user">
-                                        <a href="">Paul David</a>
-                                    </div>
-                                    <div class="date">
-                                        <a href="">10 Jan, 2022</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="photo">
-                                    <img src="uploads/n6.jpg" alt="">
-                                </div>
-                                <div class="category">
-                                    <span class="badge bg-success">International</span>
-                                </div>
-                                <h3><a href="">Haaland scores before going off injured in Dortmund win and it is very
-                                        real</a></h3>
-                                <div class="date-user">
-                                    <div class="user">
-                                        <a href="">Paul David</a>
-                                    </div>
-                                    <div class="date">
-                                        <a href="">10 Jan, 2022</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="photo">
-                                    <img src="uploads/n6.jpg" alt="">
-                                </div>
-                                <div class="category">
-                                    <span class="badge bg-success">International</span>
-                                </div>
-                                <h3><a href="">Haaland scores before going off injured in Dortmund win and it is very
-                                        real</a></h3>
-                                <div class="date-user">
-                                    <div class="user">
-                                        <a href="">Paul David</a>
-                                    </div>
-                                    <div class="date">
-                                        <a href="">10 Jan, 2022</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="col-lg-4 col-md-6 sidebar-col">
                     <div class="sidebar">
-
-                        <div class="widget">
-                            <div class="ad-sidebar">
-                                <a href=""><img src="uploads/ad-3.png" alt=""></a>
-                            </div>
-                        </div>
-
-                        <div class="widget">
-                            <div class="tag-heading">
-                                <h2>Tags</h2>
-                            </div>
-                            <div class="tag">
-                                <div class="tag-item">
-                                    <a href=""><span class="badge bg-secondary">business</span></a>
-                                </div>
-                                <div class="tag-item">
-                                    <a href=""><span class="badge bg-secondary">river</span></a>
-                                </div>
-                                <div class="tag-item">
-                                    <a href=""><span class="badge bg-secondary">politics</span></a>
-                                </div>
-                                <div class="tag-item">
-                                    <a href=""><span class="badge bg-secondary">google</span></a>
-                                </div>
-                                <div class="tag-item">
-                                    <a href=""><span class="badge bg-secondary">tree</span></a>
-                                </div>
-                                <div class="tag-item">
-                                    <a href=""><span class="badge bg-secondary">airplane</span></a>
-                                </div>
-                                <div class="tag-item">
-                                    <a href=""><span class="badge bg-secondary">tiles</span></a>
-                                </div>
-                                <div class="tag-item">
-                                    <a href=""><span class="badge bg-secondary">recent</span></a>
-                                </div>
-                                <div class="tag-item">
-                                    <a href=""><span class="badge bg-secondary">brand</span></a>
-                                </div>
-                                <div class="tag-item">
-                                    <a href=""><span class="badge bg-secondary">election</span></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="widget">
-                            <div class="archive-heading">
-                                <h2>Archive</h2>
-                            </div>
-                            <div class="archive">
-                                <select name="" class="form-select">
-                                    <option value="">Select Month</option>
-                                    <option value="">February 2022</option>
-                                    <option value="">January 2022</option>
-                                    <option value="">December 2021</option>
-                                    <option value="">November 2021</option>
-                                    <option value="">October 2021</option>
-                                    <option value="">September 2021</option>
-                                    <option value="">August 2021</option>
-                                    <option value="">July 2021</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="widget">
-                            <div class="live-channel">
-                                <div class="live-channel-heading">
-                                    <h2>Live Channel - RT News</h2>
-                                </div>
-                                <div class="live-channel-item">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/V0I5eglJMRI"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="widget">
                             <div class="news">
                                 <div class="news-heading">
@@ -244,8 +88,7 @@
                                         @endif
                                         <div class="news-item">
                                             <div class="left">
-                                                <img src="{{ asset('uploads/' . $item->post_photo) }}"
-                                                    alt="">
+                                                <img src="{{ asset('uploads/' . $item->post_photo) }}" alt="">
                                             </div>
                                             <div class="right">
                                                 <div class="category">

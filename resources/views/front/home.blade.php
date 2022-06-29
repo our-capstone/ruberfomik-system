@@ -123,53 +123,6 @@
 </div>
 </div>
 
-<div class="ad-section-2">
-<div class="container">
-<div class="row">
-    <div class="col-md-12">
-        <a href=""><img src="uploads/ad-1.png" alt=""></a>
-    </div>
-</div>
-</div>
-</div>
-
-<div class="search-section">
-<div class="container">
-<div class="inner">
-    <div class="row">
-        <div class="col-md-3">
-            <div class="form-group">
-                <input type="text" name="" class="form-control" placeholder="Title or Description">
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="form-group">
-                <select name="" class="form-select">
-                    <option value="">Select Category</option>
-                    <option value="">Sports</option>
-                    <option value="">National</option>
-                    <option value="">Lifestyle</option>
-                </select>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="form-group">
-                <select name="" class="form-select">
-                    <option value="">Select SubCategory</option>
-                    <option value="">Football</option>
-                    <option value="">Cricket</option>
-                    <option value="">Baseball</option>
-                </select>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <button type="submit" class="btn btn-primary">Search</button>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-
 <div class="home-content">
 <div class="container">
 <div class="row">
@@ -282,84 +235,6 @@
 </div>
 <div class="col-lg-4 col-md-6 sidebar-col">
 <div class="sidebar">
-
-    <div class="widget">
-        <div class="ad-sidebar">
-            <a href=""><img src="uploads/ad-3.png" alt=""></a>
-        </div>
-    </div>
-
-    <div class="widget">
-        <div class="tag-heading">
-            <h2>Tags</h2>
-        </div>
-        <div class="tag">
-            <div class="tag-item">
-                <a href=""><span class="badge bg-secondary">business</span></a>
-            </div>
-            <div class="tag-item">
-                <a href=""><span class="badge bg-secondary">river</span></a>
-            </div>
-            <div class="tag-item">
-                <a href=""><span class="badge bg-secondary">politics</span></a>
-            </div>
-            <div class="tag-item">
-                <a href=""><span class="badge bg-secondary">google</span></a>
-            </div>
-            <div class="tag-item">
-                <a href=""><span class="badge bg-secondary">tree</span></a>
-            </div>
-            <div class="tag-item">
-                <a href=""><span class="badge bg-secondary">airplane</span></a>
-            </div>
-            <div class="tag-item">
-                <a href=""><span class="badge bg-secondary">tiles</span></a>
-            </div>
-            <div class="tag-item">
-                <a href=""><span class="badge bg-secondary">recent</span></a>
-            </div>
-            <div class="tag-item">
-                <a href=""><span class="badge bg-secondary">brand</span></a>
-            </div>
-            <div class="tag-item">
-                <a href=""><span class="badge bg-secondary">election</span></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="widget">
-        <div class="archive-heading">
-            <h2>Archive</h2>
-        </div>
-        <div class="archive">
-            <select name="" class="form-select">
-                <option value="">Select Month</option>
-                <option value="">February 2022</option>
-                <option value="">January 2022</option>
-                <option value="">December 2021</option>
-                <option value="">November 2021</option>
-                <option value="">October 2021</option>
-                <option value="">September 2021</option>
-                <option value="">August 2021</option>
-                <option value="">July 2021</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="widget">
-        <div class="live-channel">
-            <div class="live-channel-heading">
-                <h2>Live Channel - RT News</h2>
-            </div>
-            <div class="live-channel-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/V0I5eglJMRI"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-
     <div class="widget">
         <div class="news">
             <div class="news-heading">
@@ -462,152 +337,11 @@
     </div>
 </div>
 </div>
-
-<div class="widget">
-<div class="ad-sidebar">
-    <a href=""><img src="uploads/ad-3.png" alt=""></a>
-</div>
-</div>
-
-<div class="widget">
-<div class="poll-heading">
-    <h2>Online Poll</h2>
-</div>
-<div class="poll">
-    <div class="question">
-        Do you think that Apple products will be able to survive in the next 20 years?
-    </div>
-    <div class="answer-option">
-        <form action="" method="post">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="poll"
-                    id="poll_id_1">
-                <label class="form-check-label" for="poll_id_1">Yes</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="poll"
-                    id="poll_id_2">
-                <label class="form-check-label" for="poll_id_2">No</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="poll"
-                    id="poll_id_3">
-                <label class="form-check-label" for="poll_id_3">No Comment</label>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <a href="poll-result.html" class="btn btn-primary old">Old Result</a>
-            </div>
-        </form>
-    </div>
-</div>
-</div>
-
-</div>
-</div>
 </div>
 </div>
 </div>
 
 
-<div class="video-content">
-<div class="container">
-<div class="row">
-<div class="col-md-12">
-<div class="video-heading">
-<h2>Videos</h2>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-md-12">
-<div class="video-carousel owl-carousel">
-<div class="item">
-<div class="video-thumb">
-    <img src="http://img.youtube.com/vi/tvsyp08Uylw/0.jpg" alt="">
-    <div class="bg"></div>
-    <div class="icon">
-        <a href="http://www.youtube.com/watch?v=tvsyp08Uylw" class="video-button"><i
-                class="fas fa-play"></i></a>
-    </div>
-</div>
-<div class="video-caption">
-    <a href="">Haaland scores before going off injured in Dortmund win and it is
-        very real</a>
-</div>
-<div class="video-date">
-    <i class="fas fa-calendar-alt"></i> Feb 28, 2022
-</div>
-</div>
-<div class="item">
-<div class="video-thumb">
-    <img src="http://img.youtube.com/vi/PKATJiyz0iI/0.jpg" alt="">
-    <div class="bg"></div>
-    <div class="icon">
-        <a href="http://www.youtube.com/watch?v=PKATJiyz0iI" class="video-button"><i
-                class="fas fa-play"></i></a>
-    </div>
-</div>
-<div class="video-caption">
-    <a href="">Haaland scores before going off injured in Dortmund win and it is
-        very real</a>
-</div>
-<div class="video-date">
-    <i class="fas fa-calendar-alt"></i> Feb 28, 2022
-</div>
-</div>
-<div class="item">
-<div class="video-thumb">
-    <img src="http://img.youtube.com/vi/ekgUjyWe1Yc/0.jpg" alt="">
-    <div class="bg"></div>
-    <div class="icon">
-        <a href="http://www.youtube.com/watch?v=ekgUjyWe1Yc" class="video-button"><i
-                class="fas fa-play"></i></a>
-    </div>
-</div>
-<div class="video-caption">
-    <a href="">Haaland scores before going off injured in Dortmund win and it is
-        very real</a>
-</div>
-<div class="video-date">
-    <i class="fas fa-calendar-alt"></i> Feb 28, 2022
-</div>
-</div>
-<div class="item">
-<div class="video-thumb">
-    <img src="http://img.youtube.com/vi/LEcpS6pX9kY/0.jpg" alt="">
-    <div class="bg"></div>
-    <div class="icon">
-        <a href="http://www.youtube.com/watch?v=LEcpS6pX9kY" class="video-button"><i
-                class="fas fa-play"></i></a>
-    </div>
-</div>
-<div class="video-caption">
-    <a href="">Haaland scores before going off injured in Dortmund win and it is
-        very real</a>
-</div>
-<div class="video-date">
-    <i class="fas fa-calendar-alt"></i> Feb 28, 2022
-</div>
-</div>
-<div class="item">
-<div class="video-thumb">
-    <img src="http://img.youtube.com/vi/N88TwF4D2PI/0.jpg" alt="">
-    <div class="bg"></div>
-    <div class="icon">
-        <a href="http://www.youtube.com/watch?v=N88TwF4D2PI" class="video-button"><i
-                class="fas fa-play"></i></a>
-    </div>
-</div>
-<div class="video-caption">
-    <a href="">Haaland scores before going off injured in Dortmund win and it is
-        very real</a>
-</div>
-<div class="video-date">
-    <i class="fas fa-calendar-alt"></i> Feb 28, 2022
-</div>
-</div>
-</div>
 
 </div>
 </div>
@@ -616,11 +350,6 @@
 
 <div class="ad-section-3">
 <div class="container">
-<div class="row">
-<div class="col-md-12">
-<a href=""><img src="uploads/ad-1.png" alt=""></a>
-</div>
-</div>
 </div>
 </div>
 @endsection
