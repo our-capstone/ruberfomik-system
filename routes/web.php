@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\PostController;
 use App\Http\Controllers\Front\AboutController;
+use App\Http\Controllers\Front\PhotoController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminPostController;
 use App\Http\Controllers\Admin\AdminLoginController;
@@ -19,6 +20,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/news-detail/{id}', [PostController::class, 'detail'])->name('news_detail');
 Route::get('/category/{id}', [SubCategoryController::class, 'index'])->name('category');
+Route::get('/photo-gallery', [PhotoController::class, 'index'])->name('photo_gallery');
 
 
 /* Admin */
